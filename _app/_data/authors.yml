@@ -7,10 +7,9 @@
 # {{ author.web }}: used in atom feed
 # {{ author.twitter }}: used by Twitter Cards
 default:
-  name:         Tunghsiao Liu
-  email:        t@sparanoid.com
+  name:         Arseny Afonin
+  email:        arseny@softculture.cc
   web:          https://sparanoid.com/
-  twitter:      tunghsiao
 
 tester:
   name:         Tester

@@ -1,0 +1,10 @@
+---
+layout: page
+title: Notes
+permalink: /articles/
+desc: 新聞・ニュース・News
+---
+
+{% for post in site.categories.article %}
+  {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
+{% endfor %}

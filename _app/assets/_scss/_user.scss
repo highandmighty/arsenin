@@ -35,3 +35,20 @@
   font-size: 108%;
   opacity: .8;
 }
+
+// Arsenin
+:root {
+  --link-color: hsl(240, 100%, 50%);
+}
+
+.content {
+  p { font-size: 80%; }
+  header small { font-size: 80%; }
+  p a { font-weight: normal; text-decoration: underline; text-underline-position: under; }
+  header { background: transparent; }
+}
+
+.navigation {
+  font-size: 80%;
+  font-weight: normal;
+}
