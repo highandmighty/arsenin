@@ -40,11 +40,13 @@
 :root {
   --link-color: hsl(240, 100%, 50%);
   --text-color: hsl(240, 100%, 50%);
+  --par-font-size: calc(var(--font-size) * 0.8); // instead of 80%
+  --nav-height: calc(var(--nav-padding) * 2 + var(--par-font-size) * 2);
 }
 
 .content {
-  p { font-size: 80%; }
-  header small { font-size: 80%; }
+  p { font-size: var(--par-font-size); }
+  header small { font-size: var(--par-font-size); }
   p a {
     //transition: unset;
     font-weight: normal;
@@ -57,10 +59,16 @@
       //color: var(--link-color);
     }
   }
-  header { background: transparent; }
+  header {
+    background: transparent;
+    margin-left: calc(var(--space-header) * -1 + var(--nav-height));
+    margin-right: calc(var(--space-header) * -1 + var(--nav-height));
+    padding-left: calc(var(--space-header) - var(--nav-height));
+    padding-right: calc(var(--space-header) - var(--nav-height));
+  }
 }
 
 .navigation {
-  font-size: 80%;
+  font-size: var(--par-font-size);
   font-weight: normal;
 }
