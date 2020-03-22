@@ -40,8 +40,12 @@
 :root {
   --link-color: hsl(240, 100%, 50%);
   --text-color: hsl(240, 100%, 50%);
-  --par-font-size: calc(var(--font-size) * 0.8); // instead of 80%
-  --nav-height: calc(var(--nav-padding) * 2 + var(--par-font-size) * 2);
+  --nav-height: calc(var(--nav-padding) * 2 + var(--font-size) * 0.8 * 2);
+  --par-font-size: 80%;
+  @media (max-width: $breakpoint-md) {
+    --nav-height: calc(var(--nav-padding) * 2 + var(--font-size) * 0.9 * 2);
+    --par-font-size: 90%;
+  }
 }
 
 .content {
@@ -65,6 +69,10 @@
     margin-right: calc(var(--space-header) * -1 + var(--nav-height));
     padding-left: calc(var(--space-header) - var(--nav-height));
     padding-right: calc(var(--space-header) - var(--nav-height));
+    @media (max-width: $breakpoint-md) {
+      margin-left: calc(var(--space-header) * -1);
+      margin-right: calc(var(--space-header) * -1);
+    }
   }
 }
 

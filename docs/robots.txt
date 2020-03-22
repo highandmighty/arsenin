@@ -1,3 +1,0 @@
-Sitemap: https://sparanoid.com/arsenin/sitemap.xml
-
-User-agent: *
