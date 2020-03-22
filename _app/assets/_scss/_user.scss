@@ -39,12 +39,24 @@
 // Arsenin
 :root {
   --link-color: hsl(240, 100%, 50%);
+  --text-color: hsl(240, 100%, 50%);
 }
 
 .content {
   p { font-size: 80%; }
   header small { font-size: 80%; }
-  p a { font-weight: normal; text-decoration: underline; text-underline-position: under; }
+  p a {
+    //transition: unset;
+    font-weight: normal;
+    text-decoration: var(--text-color) underline;
+    text-underline-position: under;
+    &:hover,
+    &:focus {
+      //transition: unset;
+      text-decoration: transparent underline !important;
+      //color: var(--link-color);
+    }
+  }
   header { background: transparent; }
 }
 
